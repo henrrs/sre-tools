@@ -1,0 +1,9 @@
+groups:
+  - name: linux-server
+    rules:
+      - alert: LinuxServerDown
+        expr: up{job="Linux Server"} == 0
+        labels:
+          severity: critical
+        annotations:
+          summary: Linux Server Down

@@ -1,0 +1,23 @@
+groups:
+  - name: test-alerts
+    rules:
+      - alert: Server1Down
+        expr: 1
+        labels:
+          severity: critical
+          service: linuxserver
+        annotations:
+          summary: Server 1 Down
+      - alert: Server2Down
+        expr: 1
+        labels:
+          severity: critical
+          service: linuxserver
+        annotations:
+          summary: Server 2 Down
+      - alert: DownStreamServiceDown
+        expr: 1
+        labels:
+          severity: critical
+        annotations:
+          summary: A downstream service is broken.
